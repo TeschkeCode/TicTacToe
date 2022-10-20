@@ -9,8 +9,11 @@ td {
 	width: 133px;
 	height: 133px;
 	position: relative;
+	cursor: pointer;
 }
-
+td:hover {
+	background-color: rgb(173, 173, 195)
+}
 tr:first-child td {
 	border-top: 0;
 }
@@ -32,4 +35,7 @@ tr:last-child td {
 	left: 26px;
 	right: 26px;
 	top: 26px;
+}
+.d-none {
+	display: none;
 }

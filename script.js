@@ -3,18 +3,21 @@ let fields = [];
 let currentShape = 'cross';
 
 function fillShape(id) {
-	if (currentShape == 'cross') {
-		currentShape = 'circle';
-          document.getElementById('player-1').classList.remove('player-inactive');
-          document.getElementById('player-2').classList.add('player-inactive');
-	} else {
-		currentShape = 'cross';
-          document.getElementById('player-1').classList.add('player-inactive');
-          document.getElementById('player-2').classList.remove('player-inactive');
-	}
-	fields[id] = currentShape;
-	draw();
-	checkforWin();
+     if(!fields[id]){ // Wenn Feld bereits belegt, wird Wert true ausgegeben
+          if (currentShape == 'cross') {
+               currentShape = 'circle';
+               document.getElementById('player-1').classList.remove('player-inactive');
+               document.getElementById('player-2').classList.add('player-inactive');
+          } else {
+               currentShape = 'cross';
+               document.getElementById('player-1').classList.add('player-inactive');
+               document.getElementById('player-2').classList.remove('player-inactive');
+          }
+          fields[id] = currentShape;
+          draw();
+          checkforWin();
+     }
+	
 }
 function draw() {
 	for (let i = 0; i < fields.length; i++) {

@@ -1,5 +1,14 @@
 let fields =[];
 
+let currentShape ='cross';
+
 function fillShape(id){
-     fields[id] = 'cross';
+
+     if (currentShape == 'cross') {
+          currentShape = 'circle';
+     }
+     else{
+          currentShape = 'cross';
+     }
+     fields[id] = currentShape;
 }

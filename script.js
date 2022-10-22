@@ -19,7 +19,7 @@ function fillShape(id) {
      }
 	
 }
-function draw() {
+function draw() { // Kreuz oder Kreis zeichnen
 	for (let i = 0; i < fields.length; i++) {
 		if (fields[i] == 'circle') {
 			document.getElementById('circle-' + i).classList.remove('d-none');
@@ -29,7 +29,7 @@ function draw() {
 		}
 	}
 }
-function checkforWin() {
+function checkforWin() {  // Gewinner ermitteln
 	let winner;
 
 	//* Horizontale Treffer

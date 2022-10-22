@@ -69,3 +69,14 @@ tr:last-child td {
 .d-none {
 	display: none;
 }
+.horizontal-line{
+	height: 10px;
+	background-color: rgba( 0, 0, 0, 0.5);
+	width: 350px;
+	position:absolute;
+	top: 0;
+	
+}
+.make-vertical{
+	transform: rotate(90deg);
+}

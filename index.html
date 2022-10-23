@@ -9,6 +9,7 @@
 		<title>TicTacToe</title>
 	</head>
 	<body>
+		<img class="game-over d-none" id="game-over" src="./img/game-over.png" alt="">
 		<div class="player-panel">
 			<div class="player-inactive" id="player-1">
 				<img class="" src="./img/circle.png" />Player 1
@@ -16,27 +17,27 @@
 			<div id="player-2"><img class="" src="./img/cross.png" />Player 2</div>
 		</div>
 		<!-- Horizontale Linie bei Treffer -->
-		<div class="horizontal-line" style="top: 160px;"></div>
-		<div class="horizontal-line" style="top: 300px;"></div>
-		<div class="horizontal-line" style="top: 440px;"></div>
+		<div id="line-1" class="horizontal-line" style="top: 160px;"></div>
+		<div id="line-2" class="horizontal-line" style="top: 300px;"></div>
+		<div id="line-3" class="horizontal-line" style="top: 440px;"></div>
 		<!-- Vertikale Linie bei Treffer -->
-		<div class="horizontal-line make-vertical" style="top: 300px;"></div>
-		<div
+		<div id="line-4" class="horizontal-line make-vertical" style="top: 300px;"></div>
+		<div id="line-5"
 			class="horizontal-line make-vertical"
 			style="top: 300px; left: 250px;"
 		></div>
-		<div
+		<div id="line-6"
 			class="horizontal-line make-vertical"
 			style="top: 300px; right: 250px;"
 		></div>
 		<!-- Diagonale Linie bei Treffer -->
-		<div
+		<div id="line-7"
 			class="horizontal-line make-vertical"
-			style="top: 300px; transform: rotate(45deg);"
+			style="top: 300px; transform: rotate(45deg) scaleX(0.0);"
 		></div>
-		<div
+		<div id="line-8"
 			class="horizontal-line make-vertical"
-			style="top: 300px; transform: rotate(-45deg);"
+			style="top: 300px; transform: rotate(-45deg)scaleX(0.0);"
 		></div>
 
 		<table>

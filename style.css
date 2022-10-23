@@ -74,9 +74,31 @@ tr:last-child td {
 	background-color: rgba( 0, 0, 0, 0.5);
 	width: 350px;
 	position:absolute;
-	top: 0;
+	transform: scaleX(0.0);
+	transform: scaleY(0.0);
+	transition: transform 225ms ease-in-out;
+	z-index: 1;
+
 	
 }
 .make-vertical{
-	transform: rotate(90deg);
+	transform: rotate(90deg) scaleX(0.0);
+}
+.game-over{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index:2 ;
+animation: zoomIn 225ms ease-in-out;
+}
+@keyframes zoomIn {
+	from{
+		opacity: 0;
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+		opacity: 1;
+	}
 }

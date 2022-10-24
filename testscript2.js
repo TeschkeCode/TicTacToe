@@ -33,7 +33,7 @@ function draw() {
 function checkforWin() {
 	// Gewinner ermitteln
 	let winner;
-	//Horizontal
+	//Horizontal gewinnt
 	if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
 		winner = fields[0];
 		document.getElementById('line-1').style.transform = 'scaleX(1)';
@@ -49,7 +49,7 @@ function checkforWin() {
 		document.getElementById('line-3').style.transform = 'scaleX(1)';
 	}
 
-	//Vertical
+	//Vertical gewinnt
 	if (fields[0] == fields[3] && fields[3] == fields[6] && fields[0]) {
 		winner = fields[0];
 		document.getElementById('line-6').style.transform =
@@ -67,7 +67,7 @@ function checkforWin() {
 		document.getElementById('line-5').style.transform =
 			'rotate(90deg) scaleX(1)';
 	}
-	//Diagonal
+	//Diagonal gewinnt
 
 	if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
 		winner = fields[0];

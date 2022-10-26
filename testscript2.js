@@ -19,6 +19,23 @@ function fillShape(id) {
 		checkforWin();
 	}
 }
+function restart() {
+	// Spiel neu starten
+	gameOver = false;
+	fields = [];
+	document.getElementById('game-over').classList.add('d-none'); //Entfernt gameover-Bild
+	document.getElementById('restart-button').classList.add('d-none'); // Entfernt Restart-Button
+
+	for (let i = 1; i < 8; i++) {
+		document.getElementById('line-' + i).classList.add('d-none');
+	}
+
+	for (let i = 0; i < 9; i++) {
+		document.getElementById('circle-' + i).classList.add('d-none');
+		document.getElementById('cross-' + i).classList.add('d-none');
+	}
+}
+
 function draw() {
 	// Kreuz oder Kreis zeichnen
 	for (let i = 0; i < fields.length; i++) {
@@ -84,9 +101,10 @@ function checkforWin() {
 	if (winner) {
 		console.log('Gewonnen:', winner);
 		gameOver = true;
-		
+
 		setTimeout(function () {
 			document.getElementById('game-over').classList.remove('d-none');
+			document.getElementById('restart-button').classList.remove('d-none');
 		}, 1000);
 	}
 }

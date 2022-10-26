@@ -26,13 +26,14 @@ function restart() {
 	document.getElementById('game-over').classList.add('d-none'); //Entfernt gameover-Bild
 	document.getElementById('restart-button').classList.add('d-none'); // Entfernt Restart-Button
 
-	for (let i = 1; i < 8; i++) {
-		document.getElementById('line-' + i).classList.add('d-none');
+	for (let i = 1; i <=8; i++) {
+		/* document.getElementById('line-' + i).classList.add('d-none');*/
+		document.getElementById('line-' +i).style.transform = 'scaleX(0)';
 	}
 
 	for (let i = 0; i < 9; i++) {
-		document.getElementById('circle-' + i).classList.add('d-none');
-		document.getElementById('cross-' + i).classList.add('d-none');
+		document.getElementById('circle-' + i).classList.add('d-none'); // entfernt alle Kreise
+		document.getElementById('cross-' + i).classList.add('d-none'); // entfernt alle Kreuze
 	}
 }
 
@@ -40,10 +41,10 @@ function draw() {
 	// Kreuz oder Kreis zeichnen
 	for (let i = 0; i < fields.length; i++) {
 		if (fields[i] == 'circle') {
-			document.getElementById('circle-' + i).classList.remove('d-none');
+			document.getElementById('circle-' + i).classList.remove('d-none'); // zeichnet Kreis
 		}
 		if (fields[i] == 'cross') {
-			document.getElementById('cross-' + i).classList.remove('d-none');
+			document.getElementById('cross-' + i).classList.remove('d-none'); // zeichnet Kreuz
 		}
 	}
 }
@@ -98,8 +99,7 @@ function checkforWin() {
 			'rotate(135deg) scaleX(1.2)';
 	}
 
-	if (winner) {
-		console.log('Gewonnen:', winner);
+	if (!!winner) {
 		gameOver = true;
 
 		setTimeout(function () {
@@ -108,3 +108,4 @@ function checkforWin() {
 		}, 1000);
 	}
 }
+ 

@@ -84,6 +84,7 @@ function checkforWin() {
 	if (winner) {
 		console.log('Gewonnen:', winner);
 		gameOver = true;
+		
 		setTimeout(function () {
 			document.getElementById('game-over').classList.remove('d-none');
 		}, 1000);
